@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ index.php [QSA,L]
+</IfModule>
+
+SetEnv FILES_ROOT .
+SetEnv SHOW_HIDDEN_FILES 0
+SetEnv SHOW_MODIFIED_DATE 1
+SetEnv SHOW_FOLDER_SIZE 0
